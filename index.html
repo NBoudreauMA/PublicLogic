@@ -1,134 +1,179 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PublicLogic × VAULT — Launching 09·01</title>
-  <meta name="description" content="PublicLogic × VAULT — a practitioner-built logic toolkit to standardize operations and ship outcomes. Launching 09/01." />
-  <meta name="theme-color" content="#0b1020" />
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Public_Logic — Coming Soon</title>
+    <meta name="description" content="PublicLogic helps municipalities ship modern, practical systems—fast. VAULT: Virtual Automation + Unified Logic for Towns. Launching Sept 1, 2025." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="PublicLogic × VAULT — Launching 09·01" />
-  <meta property="og:description" content="Systems, not slides. Standardize work. Connect tools. Ship outcomes." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nboudreauma.github.io/PublicLogic/" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Public_Logic — Coming Soon" />
+    <meta property="og:description" content="Smart systems. Stronger communities. VAULT: Virtual Automation + Unified Logic for Towns." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://publiclogic.example" />
+    <meta property="og:image" content="/og-image.png" />
 
-  <!-- Font (optional; safe to remove) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Favicons (replace paths later) -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="nav">
-    <div class="wrap">
-      <a class="brand" href="#">
-        <span class="logo" aria-hidden="true">PL</span>
-        <strong>PublicLogic</strong>
-        <span class="x">×</span>
-        <span class="vault">VAULT</span>
-      </a>
-      <nav class="links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#vault">VAULT</a>
-        <a href="#launch" class="pill">09·01</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">Pre-launch</p>
-        <h1>Systems, not slides.</h1>
-        <p class="lead">A practitioner-built logic toolkit to standardize work, connect the tools you already use, and ship outcomes that stick.</p>
-
-        <div id="countdown" class="countdown" aria-label="Countdown to 09/01 launch">
-          <div><span id="d">–</span><small>Days</small></div>
-          <div><span id="h">–</span><small>Hours</small></div>
-          <div><span id="m">–</span><small>Minutes</small></div>
-          <div><span id="s">–</span><small>Seconds</small></div>
-        </div>
-
-        <div class="cta">
-          <a class="btn primary" href="mailto:admin@hubbardstonma.gov?subject=PublicLogic%20Early%20Access&body=I%E2%80%99m%20interested%20in%20early%20access%20to%20PublicLogic%20and%20VAULT.">Request early access</a>
-          <a class="btn" href="mailto:admin@hubbardstonma.gov?subject=PublicLogic%20Launch%20Note&body=Please%20send%20the%20launch%20note%20on%2009/01.">Get the launch note</a>
-        </div>
+    <!--
+      NOTE FROM SETUP
+      • This is a bare HTML holding page. We’ll add styling next (Tailwind or vanilla CSS).
+      • Replace placeholder links/email below. Keep the semantic structure.
+      • Launch target: September 1, 2025.
+    -->
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a class="brand" href="#home" aria-label="Public Logic home">
+          <span class="brand-word">Public</span>
+          <span class="brand-underscore" aria-hidden="true">_</span>
+          <span class="brand-word">Logic</span>
+        </a>
+        <nav class="nav" aria-label="Primary"></nav>
       </div>
+    </header>
 
-      <!-- ambient background -->
-      <div class="glow g1"></div>
-      <div class="glow g2"></div>
-    </section>
+    <main id="home" class="site-main" role="main">
+      <!-- Hero -->
+      <section class="section hero" aria-labelledby="hero-title">
+        <div class="container">
+          <p class="prelaunch-badge" role="status">Launching September 1, 2025</p>
 
-    <!-- ABOUT -->
-    <section id="about" class="grid wrap">
-      <article class="card">
-        <h3>Built by practitioners</h3>
-        <p>We operate where work actually happens. Tight loops, minimal jargon, and deliverables you can ship this quarter.</p>
-      </article>
-      <article class="card">
-        <h3>Framework > one-off</h3>
-        <p>Standard libraries for intake, routing, records, and reporting. Reusable patterns beat bespoke rebuilds.</p>
-      </article>
-      <article class="card">
-        <h3>Platform-agnostic</h3>
-        <p>Works with the stack you already have (Microsoft 365, email, APIs). No rip-and-replace, no vendor sprawl.</p>
-      </article>
-    </section>
+          <h1 id="hero-title" class="hero-title">
+            Smart Systems. Stronger Communities.
+          </h1>
+          <p class="hero-sub">
+            Public_Logic is a practitioner-led shop helping towns ship real, usable systems—fast—without ripping out what already works.
+          </p>
 
-    <!-- VAULT PEEK -->
-    <section id="vault" class="wrap vault">
-      <div class="split">
-        <div>
-          <h2>VAULT</h2>
-          <p class="sub">Virtual Automation & Unified Logic Toolkit</p>
-          <ul class="checks">
-            <li>Intake → Workflow → Compliance → Archive</li>
-            <li>Single source of logic; clean hand-offs</li>
-            <li>Files, metadata, and audit trail by default</li>
+          <div class="hero-cta">
+            <!-- TODO: replace with your PublicLogic email address -->
+            <a class="btn" href="mailto:change-me@publiclogic.email?subject=PublicLogic%20Prelaunch%20Interest&body=Name%3A%0ARole%3A%0AMunicipality%2FOrg%3A%0AProblem%20you%20want%20to%20solve%3F%3A%0A" aria-label="Email Public Logic for prelaunch access">
+              Get the launch email
+            </a>
+            <a class="btn btn-secondary" href="#vault" aria-label="Learn about VAULT framework">Learn about VAULT</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pillars -->
+      <section class="section pillars" aria-labelledby="pillars-title">
+        <div class="container">
+          <h2 id="pillars-title" class="section-title">People_Data_Systems</h2>
+          <p class="section-lead">
+            Simple truth: when staff can move faster with clarity, residents feel it. We design around people first, then data, then systems—so change sticks.
+          </p>
+          <ul class="pillars-list" role="list">
+            <li class="pillar">
+              <h3 class="pillar-title">People</h3>
+              <p>Reduce clicks, clear ownership, fewer "where did that go?" moments. Built for frontline reality.</p>
+            </li>
+            <li class="pillar">
+              <h3 class="pillar-title">Data</h3>
+              <p>Single source of truth, clean naming, sane retention. Useful dashboards—not shelfware.</p>
+            </li>
+            <li class="pillar">
+              <h3 class="pillar-title">Systems</h3>
+              <p>No rip-and-replace. We extend what you already use (email, M365, forms, APIs) and automate the busywork.</p>
+            </li>
           </ul>
         </div>
-        <div class="panel">
-          <!-- simple inline SVG mark -->
-          <svg viewBox="0 0 200 200" role="img" aria-label="VAULT mark">
-            <defs>
-              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0" stop-color="#3be389"/>
-                <stop offset=".6" stop-color="#2bc0ea"/>
-                <stop offset="1" stop-color="#6ea8ff"/>
-              </linearGradient>
-            </defs>
-            <rect x="18" y="18" width="164" height="164" rx="20" fill="url(#g)" opacity=".20" />
-            <rect x="42" y="60" width="116" height="92" rx="12" fill="none" stroke="url(#g)" stroke-width="8"/>
-            <circle cx="100" cy="106" r="16" fill="none" stroke="url(#g)" stroke-width="8"/>
-            <path d="M72 60a28 28 0 0 1 56 0" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round"/>
-          </svg>
+      </section>
+
+      <!-- VAULT -->
+      <section id="vault" class="section vault" aria-labelledby="vault-title">
+        <div class="container">
+          <div class="vault-head">
+            <!-- Minimal inline mark; replace with final vector later if desired -->
+            <svg class="vault-mark" width="40" height="40" viewBox="0 0 48 48" role="img" aria-label="Vault folder with lock icon">
+              <title>VAULT mark</title>
+              <rect x="5" y="12" width="38" height="24" rx="3" ry="3" fill="currentColor" opacity="0.12"/>
+              <path d="M14 12h8l2 3h14a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3h5z" fill="currentColor" opacity="0.18"/>
+              <rect x="30" y="22" width="10" height="8" rx="1.6" fill="currentColor"/>
+              <path d="M33 22v-2a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h2 id="vault-title" class="section-title">VAULT</h2>
+          </div>
+          <p class="section-lead"><strong>Virtual Automation + Unified Logic for Towns.</strong> A standard that turns forms, files, and approvals into a repeatable flow—from intake to archive—so your team stops rebuilding the same thing, over and over.</p>
+
+          <div class="features">
+            <article class="feature">
+              <h3 class="feature-title">Universal intake</h3>
+              <p>One smart form pattern. Clear fields, validation, routing rules. Residents see progress; staff see exactly what's next.</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">Automated workflow</h3>
+              <p>Approvals, holds, loop-backs. Notifications that help, not spam. Every action leaves a clean trail.</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">Naming + retention that sticks</h3>
+              <p>Consistent folders and filenames. Records where they belong, with sane retention out of the box.</p>
+            </article>
+            <article class="feature">
+              <h3 class="feature-title">Dashboards without drama</h3>
+              <p>Real-time status and monthly snapshots for boards and managers. The point is clarity, not charts for charts' sake.</p>
+            </article>
+          </div>
+
+          <details class="tech" aria-label="Technical notes">
+            <summary>Technical notes</summary>
+            <ul>
+              <li>Works with common municipal stacks (Microsoft 365, SharePoint/OneDrive, Power Automate, email, APIs).</li>
+              <li>Designed for compliance and handoff—anyone can follow the trail.</li>
+              <li>Modular: start with one workflow, extend to your stack at your pace.</li>
+            </ul>
+          </details>
         </div>
+      </section>
+
+      <!-- Proof & Invite -->
+      <section class="section proof" aria-labelledby="proof-title">
+        <div class="container">
+          <h2 id="proof-title" class="section-title">Built in the trenches</h2>
+          <ul class="proof-list" role="list">
+            <li>Designed by practitioners working inside town hall, not a demo lab.</li>
+            <li>Tested against real approvals, real deadlines, and real residents.</li>
+            <li>Pilot-friendly: pick a workflow (licensing, DPW/facilities, payroll/time), ship in weeks.</li>
+          </ul>
+
+          <div class="invite">
+            <h3 class="invite-title">Want early access?</h3>
+            <p>We're lining up a small set of partners and pilot towns ahead of launch. Tell us your biggest pain point and we'll see if VAULT fits.</p>
+            <!-- TODO: replace email with your PublicLogic inbox -->
+            <a class="btn" href="mailto:change-me@publiclogic.email?subject=Pilot%20%2F%20Partner%20Inquiry&body=Name%3A%0ARole%3A%0AOrg%3A%0AWhat%20are%20you%20trying%20to%20fix%3F%3A%0ATimeline%3A" aria-label="Email to request early access">Request early access</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p class="foot-brand"><span class="brand-word">Public</span><span class="brand-underscore" aria-hidden="true">_</span><span class="brand-word">Logic</span></p>
+        <p class="foot-tag">Smart Systems. Stronger Communities.</p>
+        <p class="foot-meta">
+          © <span id="year"></span> PublicLogic. All rights reserved.
+          <!-- No ™ on PL per preference. -->
+        </p>
       </div>
-    </section>
+    </footer>
 
-    <!-- LAUNCH CONTENT -->
-    <section id="launch" class="wrap coming card">
-      <h2>Dropping 09/01</h2>
-      <ul>
-        <li>Launch brief (how the toolkit works)</li>
-        <li>Playbooks & patterns you can copy</li>
-        <li>Case snapshots and outcomes</li>
-        <li>Early-access pilots & simple pricing</li>
-      </ul>
-      <p class="note">Want a heads-up? Hit <em>Get the launch note</em> above.</p>
-    </section>
-  </main>
+    <script>
+      // Minimal JS: set year, optional countdown if needed later
+      (function() {
+        const y = document.getElementById('year');
+        if (y) y.textContent = new Date().getFullYear();
+      })();
+    </script>
 
-  <footer class="foot">
-    <div class="wrap">
-      <small>© <span id="year"></span> PublicLogic. All rights reserved.</small>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
+    <!--
+      QUICK STYLE HOOKS (class names used above):
+      .container, .brand, .brand-underscore, .hero, .btn, .btn-secondary,
+      .section, .section-title, .section-lead, .pillars-list, .features,
+      .feature, .vault-mark, .invite, .site-footer
+      We'll wire these up next.
+    -->
+  </body>
 </html>
