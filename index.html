@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Public_Logic — Coming Soon</title>
-    <meta name="description" content="PublicLogic helps municipalities ship modern, practical systems—fast. VAULT: Virtual Automation + Unified Logic for Towns. Launching Sept 1, 2025." />
+    <meta name="description" content="PublicLogic helps towns cut through the noise and fix the basics. VAULT™: Virtual Automation + Unified Logic for Towns. Launching Sept 1, 2025." />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Public_Logic — Coming Soon" />
-    <meta property="og:description" content="Smart systems. Stronger communities. VAULT: Virtual Automation + Unified Logic for Towns." />
+    <meta property="og:description" content="Smart systems. Stronger communities. VAULT™: A municipal solution to a universal problem." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://publiclogic.example" />
     <meta property="og:image" content="/og-image.png" />
@@ -19,115 +19,100 @@
     <style>
       :root {
         --pl-green: #00b37e;
-        --pl-dark: #1a1a1a;
-        --pl-light: #f5f5f5;
-        --pl-gray: #555;
-        --pl-accent: #00664f;
+        --pl-dark: #121212;
+        --pl-light: #f7f7f7;
+        --pl-gray: #4a4a4a;
+        --pl-border: #e6e6e6;
+        --pl-accent: #0a3d31;
       }
-      * { box-sizing: border-box; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
       body {
-        margin: 0;
-        font-family: system-ui, sans-serif;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
         background: var(--pl-light);
         color: var(--pl-dark);
         line-height: 1.6;
       }
-      .container {
-        width: 90%;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 2rem 0;
-      }
+      .container { width: min(1100px, 92%); margin-inline: auto; padding-block: 1rem; }
+
+      /* Header */
       header {
-        background: white;
-        border-bottom: 1px solid #eaeaea;
+        position: sticky; top: 0; z-index: 10;
+        background: rgba(255,255,255,0.9);
+        border-bottom: 1px solid var(--pl-border);
+        backdrop-filter: blur(6px);
       }
-      .brand {
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: var(--pl-dark);
-        text-decoration: none;
-      }
-      .brand-underscore { color: var(--pl-green); }
+      .brand { font-weight: 900; font-size: 1.4rem; letter-spacing: -0.01em; color: var(--pl-dark); text-decoration: none; display: inline-flex; align-items: baseline; gap: 2px; }
+      .brand-underscore { color: var(--pl-green); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; animation: blink 1.2s steps(2, start) infinite; }
+      @keyframes blink { 50% { opacity: 0.25; } }
 
-      .hero {
-        text-align: center;
-        padding: 4rem 0;
-        background: linear-gradient(135deg, var(--pl-green), var(--pl-accent));
-        color: white;
+      /* Hero */
+      .hero { position: relative; overflow: hidden; color: var(--pl-dark); }
+      .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(1rem, 2vw, 2rem); align-items: center; padding-block: clamp(2.5rem, 6vw, 5rem); }
+      .hero::before {
+        content: ""; position: absolute; inset: 0; z-index: -2;
+        background: radial-gradient(1200px 600px at -10% -20%, #d9fff3 0%, transparent 60%), radial-gradient(900px 500px at 110% 110%, #e6fff8 0%, transparent 60%);
       }
-      .prelaunch-badge {
-        display: inline-block;
-        background: rgba(255,255,255,0.15);
-        padding: 0.25rem 0.75rem;
-        border-radius: 999px;
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
+      .hero::after {
+        /* subtle municipal pattern (blueprint-ish) */
+        content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0.35;
+        background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 24px), repeating-linear-gradient(90deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 24px);
+        mix-blend-mode: multiply;
       }
-      .hero-title {
-        font-size: 2.5rem;
-        margin: 0.5rem 0;
+      .prelaunch-badge { display:inline-block; border:1px solid var(--pl-border); background:#fff; padding: .3rem .6rem; border-radius: 999px; font-size: .8rem; }
+      .hero-title { font-weight: 900; letter-spacing: -0.02em; font-size: clamp(1.8rem, 4.5vw, 3rem); margin-top: .7rem; }
+      .hero-sub { max-width: 52ch; color: var(--pl-gray); margin-top: .6rem; }
+      .hero-cta { margin-top: 1rem; display: flex; gap: .6rem; flex-wrap: wrap; align-items:center; }
+      .cta {
+        display:inline-flex; align-items:center; gap:.5rem; padding:.6rem .9rem; border:1.5px solid var(--pl-dark);
+        border-radius: 10px; background:#fff; color:var(--pl-dark); font-weight:700; text-decoration:none; transition: transform .15s ease, background .15s ease;
       }
-      .hero-sub {
-        max-width: 650px;
-        margin: 1rem auto;
-      }
-      .hero-cta { margin-top: 2rem; }
-      .btn {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        margin: 0.5rem;
-        border-radius: 8px;
-        font-weight: 600;
-        text-decoration: none;
-        background: white;
-        color: var(--pl-green);
-        transition: background 0.2s, color 0.2s;
-      }
-      .btn:hover { background: var(--pl-light); }
-      .btn-secondary {
-        background: transparent;
-        border: 2px solid white;
-        color: white;
-      }
-      .btn-secondary:hover {
-        background: white;
-        color: var(--pl-green);
-      }
+      .cta:hover { transform: translateY(-1px); }
+      .cta.secondary { border-color: var(--pl-green); color: var(--pl-green); background: #ffffff; }
+      .cta .arrow { transition: transform .15s ease; }
+      .cta:hover .arrow { transform: translateX(2px); }
 
-      .section { padding: 4rem 0; }
-      .section-title { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
-      .section-lead { text-align: center; max-width: 700px; margin: 0 auto 2rem; }
-
-      .pillars-list, .features, .proof-list {
-        display: grid;
-        gap: 1.5rem;
-        margin: 2rem 0;
+      .hero-stat { display:grid; grid-template-columns: repeat(3, 1fr); gap:.6rem; margin-top: 1rem; }
+      .stat {
+        padding: .8rem; border: 1px dashed var(--pl-border); border-radius: 12px; background:#fff; text-align:left;
       }
-      .pillars-list { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
-      .pillar, .feature {
-        background: white;
-        border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      }
-      .pillar-title, .feature-title { margin-top: 0; color: var(--pl-green); }
+      .stat b { display:block; font-size:1.1rem; }
+      .stat span { color:var(--pl-gray); font-size:.9rem; }
 
-      .vault-head { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+      /* Sections */
+      .section { padding-block: clamp(2rem, 6vw, 3.2rem); }
+      .section-title { font-size: clamp(1.4rem, 3vw, 2rem); text-align: left; font-weight: 800; letter-spacing: -0.01em; }
+      .section .container { display: grid; gap: 1rem; }
+      .section-lead { max-width: 68ch; color: var(--pl-gray); }
+
+      .pillars-list { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:.8rem; }
+      @media (max-width: 860px){ .hero .wrap{grid-template-columns:1fr;} .pillars-list{grid-template-columns:1fr;} }
+      .card { background:#fff; border:1px solid var(--pl-border); border-radius: 12px; padding: 1rem; }
+      .pillar-title, .feature-title { margin:0 0 .25rem 0; color: var(--pl-accent); font-weight: 800; font-size: 1.05rem; }
+      .muted { color: var(--pl-gray); }
+
+      /* VAULT */
+      .vault { background: #fff; border-top: 1px solid var(--pl-border); border-bottom: 1px solid var(--pl-border); }
+      .vault-head { display:flex; align-items:center; gap:.5rem; }
       .vault-mark { color: var(--pl-green); }
+      .features { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:.8rem; margin-top:.5rem; }
+      @media (max-width: 860px){ .features{grid-template-columns:1fr;} }
 
-      .invite { text-align: center; margin-top: 2rem; }
-      .invite-title { margin-bottom: 0.5rem; }
+      /* Proof */
+      .proof-list { list-style: "–  "; padding-left: 1ch; }
+      .invite { display:flex; align-items:center; gap:.8rem; flex-wrap: wrap; margin-top: 1rem; }
 
-      footer {
-        background: var(--pl-dark);
-        color: #ddd;
-        text-align: center;
-        padding: 2rem 0;
+      /* Footer */
+      footer { background:#101010; color:#cfcfcf; padding-block: 1.4rem; margin-top: 2rem; border-top: 1px solid #1f1f1f; }
+      .foot-brand { font-weight: 900; font-size: 1.1rem; letter-spacing: -0.01em; }
+      .foot-underscore { color: var(--pl-green); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .foot-tag { margin:.3rem 0; font-style: italic; font-size: .9rem; color:#9b9b9b; }
+      .foot-credit { margin-top:.3rem; font-size:.85rem; color:#9b9b9b; }
+
+      /* Motion respect */
+      @media (prefers-reduced-motion: reduce){
+        * { animation: none !important; transition: none !important; }
       }
-      .foot-brand { font-weight: 700; font-size: 1.25rem; }
-      .foot-underscore { color: var(--pl-green); }
-      .foot-tag { margin: 0.5rem 0; font-style: italic; }
     </style>
   </head>
   <body>
@@ -142,63 +127,73 @@
     </header>
 
     <main id="home" class="site-main" role="main">
-      <section class="section hero" aria-labelledby="hero-title">
-        <div class="container">
-          <p class="prelaunch-badge" role="status">Launching September 1, 2025</p>
-          <h1 id="hero-title" class="hero-title">Smart Systems. Stronger Communities.</h1>
-          <p class="hero-sub">Public_Logic is a practitioner-led shop helping towns ship real, usable systems—fast—without ripping out what already works.</p>
-          <div class="hero-cta">
-            <a class="btn" href="mailto:change-me@publiclogic.email">Get the launch email</a>
-            <a class="btn btn-secondary" href="#vault">Learn about VAULT</a>
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container wrap">
+          <div>
+            <span class="prelaunch-badge" role="status">Launching September 1, 2025</span>
+            <h1 id="hero-title" class="hero-title">Smart Systems. Stronger Communities.</h1>
+            <p class="hero-sub">Born inside town hall, built to cut red tape, and tested in the everyday grind of local government. Public_Logic isn’t theory—it’s a working set of tools for people who actually do the work.</p>
+            <div class="hero-cta">
+              <a class="cta" href="mailto:change-me@publiclogic.email">Get the launch email <span class="arrow">→</span></a>
+              <a class="cta secondary" href="#vault">Learn about VAULT™ <span class="arrow">→</span></a>
+            </div>
+            <div class="hero-stat" aria-label="highlights">
+              <div class="stat"><b>No rip & replace</b><span>Extend what works.</span></div>
+              <div class="stat"><b>Weeks, not years</b><span>Pilot, then scale.</span></div>
+              <div class="stat"><b>Plain talk</b><span>No vendor-speak.</span></div>
+            </div>
           </div>
+          <div aria-hidden="true"></div>
         </div>
       </section>
 
-      <section class="section pillars" aria-labelledby="pillars-title">
+      <!-- PILLARS -->
+      <section class="section" aria-labelledby="pillars-title">
         <div class="container">
           <h2 id="pillars-title" class="section-title">People_Data_Systems</h2>
-          <p class="section-lead">When staff can move faster with clarity, residents feel it. We design around people first, then data, then systems—so change sticks.</p>
+          <p class="section-lead">At the end of the day, residents don’t care about software—they care about answers. We help staff move faster with clarity so the public feels it where it matters.</p>
           <ul class="pillars-list" role="list">
-            <li class="pillar"><h3 class="pillar-title">People</h3><p>Reduce clicks, clear ownership, fewer lost items. Built for frontline reality.</p></li>
-            <li class="pillar"><h3 class="pillar-title">Data</h3><p>Single source of truth, clean naming, sane retention. Useful dashboards.</p></li>
-            <li class="pillar"><h3 class="pillar-title">Systems</h3><p>No rip-and-replace. We extend what you already use and automate the busywork.</p></li>
+            <li class="card"><h3 class="pillar-title">People</h3><p class="muted">Make the job easier for the folks on the front desk, in the DPW truck, or at the clerk’s counter. Less clicking around, more getting it done.</p></li>
+            <li class="card"><h3 class="pillar-title">Data</h3><p class="muted">No more “lost in a folder.” One clean source of truth, sensible retention, and dashboards that anyone can read.</p></li>
+            <li class="card"><h3 class="pillar-title">Systems</h3><p class="muted">We don’t rip and replace—we extend what towns already use: email, M365, forms, and APIs. The boring stuff that makes the magic work.</p></li>
           </ul>
         </div>
       </section>
 
+      <!-- VAULT -->
       <section id="vault" class="section vault" aria-labelledby="vault-title">
         <div class="container">
           <div class="vault-head">
-            <svg class="vault-mark" width="40" height="40" viewBox="0 0 48 48" role="img" aria-label="Vault folder with lock icon">
+            <svg class="vault-mark" width="28" height="28" viewBox="0 0 48 48" role="img" aria-label="Vault folder with lock icon">
               <rect x="5" y="12" width="38" height="24" rx="3" ry="3" fill="currentColor" opacity="0.12"/>
               <path d="M14 12h8l2 3h14a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3h5z" fill="currentColor" opacity="0.18"/>
               <rect x="30" y="22" width="10" height="8" rx="1.6" fill="currentColor"/>
               <path d="M33 22v-2a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
-            <h2 id="vault-title" class="section-title">VAULT</h2>
+            <h2 id="vault-title" class="section-title">VAULT™</h2>
           </div>
-          <p class="section-lead"><strong>Virtual Automation + Unified Logic for Towns.</strong> A standard that turns forms, files, and approvals into a repeatable flow—so your team stops rebuilding the same thing, over and over.</p>
+          <p class="section-lead"><strong>Virtual Automation + Unified Logic for Towns.</strong> A municipal solution to a universal problem—keeping track of forms, files, and approvals without losing your mind.</p>
           <div class="features">
-            <article class="feature"><h3 class="feature-title">Universal intake</h3><p>One smart form pattern. Residents see progress; staff see what's next.</p></article>
-            <article class="feature"><h3 class="feature-title">Automated workflow</h3><p>Approvals, holds, loop-backs. Notifications that help, not spam.</p></article>
-            <article class="feature"><h3 class="feature-title">Naming + retention</h3><p>Consistent folders and filenames. Records with sane retention out of the box.</p></article>
-            <article class="feature"><h3 class="feature-title">Dashboards</h3><p>Real-time status and monthly snapshots for boards and managers.</p></article>
+            <article class="card"><h3 class="feature-title">Universal intake</h3><p class="muted">One form pattern. Residents see progress, staff see what’s next. No mystery.</p></article>
+            <article class="card"><h3 class="feature-title">Automated workflow</h3><p class="muted">Approvals, holds, loop-backs. Notifications that help instead of overwhelm.</p></article>
+            <article class="card"><h3 class="feature-title">Naming + retention</h3><p class="muted">Folders and filenames that actually make sense. Records stay where they belong.</p></article>
+            <article class="card"><h3 class="feature-title">Dashboards</h3><p class="muted">Clear snapshots for boards and managers. No fluff—just the status at a glance.</p></article>
           </div>
         </div>
       </section>
 
+      <!-- PROOF -->
       <section class="section proof" aria-labelledby="proof-title">
         <div class="container">
           <h2 id="proof-title" class="section-title">Built in the trenches</h2>
           <ul class="proof-list" role="list">
-            <li>Designed by practitioners working inside town hall.</li>
-            <li>Tested against real approvals and deadlines.</li>
-            <li>Pilot-friendly: pick a workflow, ship in weeks.</li>
+            <li>Sketched on whiteboards and tested at Select Board meetings.</li>
+            <li>Stress-tested by staff juggling too many hats and not enough hours.</li>
+            <li>Pilot-ready: pick a workflow—licensing, DPW, payroll—and ship it in weeks, not years.</li>
           </ul>
           <div class="invite">
-            <h3 class="invite-title">Want early access?</h3>
-            <p>We're lining up a small set of partners and pilot towns ahead of launch.</p>
-            <a class="btn" href="mailto:change-me@publiclogic.email">Request early access</a>
+            <a class="cta" href="mailto:change-me@publiclogic.email">Request early access <span class="arrow">→</span></a>
           </div>
         </div>
       </section>
@@ -206,9 +201,10 @@
 
     <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <p class="foot-brand"><span class="brand-word">Public</span><span class="brand-underscore">_</span><span class="brand-word">Logic</span></p>
+        <p class="foot-brand"><span class="brand-word">Public</span><span class="foot-underscore">_</span><span class="brand-word">Logic</span></p>
         <p class="foot-tag">Smart Systems. Stronger Communities.</p>
         <p class="foot-meta">© <span id="year"></span> PublicLogic. All rights reserved.</p>
+        <p class="foot-credit">Framework architected and designed by Nathan Boudreau, MPA — Town Administrator & Practitioner</p>
       </div>
     </footer>
 
