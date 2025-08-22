@@ -13,16 +13,122 @@
     <meta property="og:url" content="https://publiclogic.example" />
     <meta property="og:image" content="/og-image.png" />
 
-    <!-- Favicons (replace paths later) -->
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!--
-      NOTE FROM SETUP
-      • This is a bare HTML holding page. We’ll add styling next (Tailwind or vanilla CSS).
-      • Replace placeholder links/email below. Keep the semantic structure.
-      • Launch target: September 1, 2025.
-    -->
+    <style>
+      :root {
+        --pl-green: #00b37e;
+        --pl-dark: #1a1a1a;
+        --pl-light: #f5f5f5;
+        --pl-gray: #555;
+        --pl-accent: #00664f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: var(--pl-light);
+        color: var(--pl-dark);
+        line-height: 1.6;
+      }
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 0;
+      }
+      header {
+        background: white;
+        border-bottom: 1px solid #eaeaea;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--pl-dark);
+        text-decoration: none;
+      }
+      .brand-underscore { color: var(--pl-green); }
+
+      .hero {
+        text-align: center;
+        padding: 4rem 0;
+        background: linear-gradient(135deg, var(--pl-green), var(--pl-accent));
+        color: white;
+      }
+      .prelaunch-badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.15);
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+      }
+      .hero-title {
+        font-size: 2.5rem;
+        margin: 0.5rem 0;
+      }
+      .hero-sub {
+        max-width: 650px;
+        margin: 1rem auto;
+      }
+      .hero-cta { margin-top: 2rem; }
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        margin: 0.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        background: white;
+        color: var(--pl-green);
+        transition: background 0.2s, color 0.2s;
+      }
+      .btn:hover { background: var(--pl-light); }
+      .btn-secondary {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+      .btn-secondary:hover {
+        background: white;
+        color: var(--pl-green);
+      }
+
+      .section { padding: 4rem 0; }
+      .section-title { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+      .section-lead { text-align: center; max-width: 700px; margin: 0 auto 2rem; }
+
+      .pillars-list, .features, .proof-list {
+        display: grid;
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .pillars-list { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+      .pillar, .feature {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      }
+      .pillar-title, .feature-title { margin-top: 0; color: var(--pl-green); }
+
+      .vault-head { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+      .vault-mark { color: var(--pl-green); }
+
+      .invite { text-align: center; margin-top: 2rem; }
+      .invite-title { margin-bottom: 0.5rem; }
+
+      footer {
+        background: var(--pl-dark);
+        color: #ddd;
+        text-align: center;
+        padding: 2rem 0;
+      }
+      .foot-brand { font-weight: 700; font-size: 1.25rem; }
+      .foot-underscore { color: var(--pl-green); }
+      .foot-tag { margin: 0.5rem 0; font-style: italic; }
+    </style>
   </head>
   <body>
     <header class="site-header" role="banner">
@@ -32,64 +138,38 @@
           <span class="brand-underscore" aria-hidden="true">_</span>
           <span class="brand-word">Logic</span>
         </a>
-        <nav class="nav" aria-label="Primary"></nav>
       </div>
     </header>
 
     <main id="home" class="site-main" role="main">
-      <!-- Hero -->
       <section class="section hero" aria-labelledby="hero-title">
         <div class="container">
           <p class="prelaunch-badge" role="status">Launching September 1, 2025</p>
-
-          <h1 id="hero-title" class="hero-title">
-            Smart Systems. Stronger Communities.
-          </h1>
-          <p class="hero-sub">
-            Public_Logic is a practitioner-led shop helping towns ship real, usable systems—fast—without ripping out what already works.
-          </p>
-
+          <h1 id="hero-title" class="hero-title">Smart Systems. Stronger Communities.</h1>
+          <p class="hero-sub">Public_Logic is a practitioner-led shop helping towns ship real, usable systems—fast—without ripping out what already works.</p>
           <div class="hero-cta">
-            <!-- TODO: replace with your PublicLogic email address -->
-            <a class="btn" href="mailto:change-me@publiclogic.email?subject=PublicLogic%20Prelaunch%20Interest&body=Name%3A%0ARole%3A%0AMunicipality%2FOrg%3A%0AProblem%20you%20want%20to%20solve%3F%3A%0A" aria-label="Email Public Logic for prelaunch access">
-              Get the launch email
-            </a>
-            <a class="btn btn-secondary" href="#vault" aria-label="Learn about VAULT framework">Learn about VAULT</a>
+            <a class="btn" href="mailto:change-me@publiclogic.email">Get the launch email</a>
+            <a class="btn btn-secondary" href="#vault">Learn about VAULT</a>
           </div>
         </div>
       </section>
 
-      <!-- Pillars -->
       <section class="section pillars" aria-labelledby="pillars-title">
         <div class="container">
           <h2 id="pillars-title" class="section-title">People_Data_Systems</h2>
-          <p class="section-lead">
-            Simple truth: when staff can move faster with clarity, residents feel it. We design around people first, then data, then systems—so change sticks.
-          </p>
+          <p class="section-lead">When staff can move faster with clarity, residents feel it. We design around people first, then data, then systems—so change sticks.</p>
           <ul class="pillars-list" role="list">
-            <li class="pillar">
-              <h3 class="pillar-title">People</h3>
-              <p>Reduce clicks, clear ownership, fewer "where did that go?" moments. Built for frontline reality.</p>
-            </li>
-            <li class="pillar">
-              <h3 class="pillar-title">Data</h3>
-              <p>Single source of truth, clean naming, sane retention. Useful dashboards—not shelfware.</p>
-            </li>
-            <li class="pillar">
-              <h3 class="pillar-title">Systems</h3>
-              <p>No rip-and-replace. We extend what you already use (email, M365, forms, APIs) and automate the busywork.</p>
-            </li>
+            <li class="pillar"><h3 class="pillar-title">People</h3><p>Reduce clicks, clear ownership, fewer lost items. Built for frontline reality.</p></li>
+            <li class="pillar"><h3 class="pillar-title">Data</h3><p>Single source of truth, clean naming, sane retention. Useful dashboards.</p></li>
+            <li class="pillar"><h3 class="pillar-title">Systems</h3><p>No rip-and-replace. We extend what you already use and automate the busywork.</p></li>
           </ul>
         </div>
       </section>
 
-      <!-- VAULT -->
       <section id="vault" class="section vault" aria-labelledby="vault-title">
         <div class="container">
           <div class="vault-head">
-            <!-- Minimal inline mark; replace with final vector later if desired -->
             <svg class="vault-mark" width="40" height="40" viewBox="0 0 48 48" role="img" aria-label="Vault folder with lock icon">
-              <title>VAULT mark</title>
               <rect x="5" y="12" width="38" height="24" rx="3" ry="3" fill="currentColor" opacity="0.12"/>
               <path d="M14 12h8l2 3h14a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3h5z" fill="currentColor" opacity="0.18"/>
               <rect x="30" y="22" width="10" height="8" rx="1.6" fill="currentColor"/>
@@ -97,53 +177,28 @@
             </svg>
             <h2 id="vault-title" class="section-title">VAULT</h2>
           </div>
-          <p class="section-lead"><strong>Virtual Automation + Unified Logic for Towns.</strong> A standard that turns forms, files, and approvals into a repeatable flow—from intake to archive—so your team stops rebuilding the same thing, over and over.</p>
-
+          <p class="section-lead"><strong>Virtual Automation + Unified Logic for Towns.</strong> A standard that turns forms, files, and approvals into a repeatable flow—so your team stops rebuilding the same thing, over and over.</p>
           <div class="features">
-            <article class="feature">
-              <h3 class="feature-title">Universal intake</h3>
-              <p>One smart form pattern. Clear fields, validation, routing rules. Residents see progress; staff see exactly what's next.</p>
-            </article>
-            <article class="feature">
-              <h3 class="feature-title">Automated workflow</h3>
-              <p>Approvals, holds, loop-backs. Notifications that help, not spam. Every action leaves a clean trail.</p>
-            </article>
-            <article class="feature">
-              <h3 class="feature-title">Naming + retention that sticks</h3>
-              <p>Consistent folders and filenames. Records where they belong, with sane retention out of the box.</p>
-            </article>
-            <article class="feature">
-              <h3 class="feature-title">Dashboards without drama</h3>
-              <p>Real-time status and monthly snapshots for boards and managers. The point is clarity, not charts for charts' sake.</p>
-            </article>
+            <article class="feature"><h3 class="feature-title">Universal intake</h3><p>One smart form pattern. Residents see progress; staff see what's next.</p></article>
+            <article class="feature"><h3 class="feature-title">Automated workflow</h3><p>Approvals, holds, loop-backs. Notifications that help, not spam.</p></article>
+            <article class="feature"><h3 class="feature-title">Naming + retention</h3><p>Consistent folders and filenames. Records with sane retention out of the box.</p></article>
+            <article class="feature"><h3 class="feature-title">Dashboards</h3><p>Real-time status and monthly snapshots for boards and managers.</p></article>
           </div>
-
-          <details class="tech" aria-label="Technical notes">
-            <summary>Technical notes</summary>
-            <ul>
-              <li>Works with common municipal stacks (Microsoft 365, SharePoint/OneDrive, Power Automate, email, APIs).</li>
-              <li>Designed for compliance and handoff—anyone can follow the trail.</li>
-              <li>Modular: start with one workflow, extend to your stack at your pace.</li>
-            </ul>
-          </details>
         </div>
       </section>
 
-      <!-- Proof & Invite -->
       <section class="section proof" aria-labelledby="proof-title">
         <div class="container">
           <h2 id="proof-title" class="section-title">Built in the trenches</h2>
           <ul class="proof-list" role="list">
-            <li>Designed by practitioners working inside town hall, not a demo lab.</li>
-            <li>Tested against real approvals, real deadlines, and real residents.</li>
-            <li>Pilot-friendly: pick a workflow (licensing, DPW/facilities, payroll/time), ship in weeks.</li>
+            <li>Designed by practitioners working inside town hall.</li>
+            <li>Tested against real approvals and deadlines.</li>
+            <li>Pilot-friendly: pick a workflow, ship in weeks.</li>
           </ul>
-
           <div class="invite">
             <h3 class="invite-title">Want early access?</h3>
-            <p>We're lining up a small set of partners and pilot towns ahead of launch. Tell us your biggest pain point and we'll see if VAULT fits.</p>
-            <!-- TODO: replace email with your PublicLogic inbox -->
-            <a class="btn" href="mailto:change-me@publiclogic.email?subject=Pilot%20%2F%20Partner%20Inquiry&body=Name%3A%0ARole%3A%0AOrg%3A%0AWhat%20are%20you%20trying%20to%20fix%3F%3A%0ATimeline%3A" aria-label="Email to request early access">Request early access</a>
+            <p>We're lining up a small set of partners and pilot towns ahead of launch.</p>
+            <a class="btn" href="mailto:change-me@publiclogic.email">Request early access</a>
           </div>
         </div>
       </section>
@@ -151,29 +206,14 @@
 
     <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <p class="foot-brand"><span class="brand-word">Public</span><span class="brand-underscore" aria-hidden="true">_</span><span class="brand-word">Logic</span></p>
+        <p class="foot-brand"><span class="brand-word">Public</span><span class="brand-underscore">_</span><span class="brand-word">Logic</span></p>
         <p class="foot-tag">Smart Systems. Stronger Communities.</p>
-        <p class="foot-meta">
-          © <span id="year"></span> PublicLogic. All rights reserved.
-          <!-- No ™ on PL per preference. -->
-        </p>
+        <p class="foot-meta">© <span id="year"></span> PublicLogic. All rights reserved.</p>
       </div>
     </footer>
 
     <script>
-      // Minimal JS: set year, optional countdown if needed later
-      (function() {
-        const y = document.getElementById('year');
-        if (y) y.textContent = new Date().getFullYear();
-      })();
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-
-    <!--
-      QUICK STYLE HOOKS (class names used above):
-      .container, .brand, .brand-underscore, .hero, .btn, .btn-secondary,
-      .section, .section-title, .section-lead, .pillars-list, .features,
-      .feature, .vault-mark, .invite, .site-footer
-      We'll wire these up next.
-    -->
   </body>
 </html>
