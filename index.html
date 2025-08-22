@@ -42,8 +42,10 @@
         border-bottom: 1px solid var(--pl-border);
         backdrop-filter: blur(6px);
       }
+      header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
       .brand { font-weight: 900; font-size: 1.4rem; letter-spacing: -0.01em; color: var(--pl-dark); text-decoration: none; display: inline-flex; align-items: baseline; gap: 2px; }
       .brand-underscore { color: var(--pl-green); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; animation: blink 1.2s steps(2, start) infinite; }
+      .hdr-sssc { font-size: .85rem; color: var(--pl-green); font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
       @keyframes blink { 50% { opacity: 0.25; } }
 
       /* Hero */
@@ -56,7 +58,7 @@
       .hero::after {
         /* subtle municipal pattern (blueprint-ish) */
         content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0.35;
-        background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 24px), repeating-linear-gradient(90deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 24px);
+        background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 24px), repeating-linear-gradient(90deg, rgba(0,0,0,0.03) 0 1px  , transparent 1px 24px);
         mix-blend-mode: multiply;
       }
       .prelaunch-badge { display:inline-block; border:1px solid var(--pl-border); background:#fff; padding: .3rem .6rem; border-radius: 999px; font-size: .8rem; }
@@ -86,7 +88,7 @@
       .section-lead { max-width: 68ch; color: var(--pl-gray); }
 
       .pillars-list { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:.8rem; }
-      @media (max-width: 860px){ .hero .wrap{grid-template-columns:1fr;} .pillars-list{grid-template-columns:1fr;} }
+      @media (max-width: 860px){ .hero .wrap{grid-template-columns:1fr;} .pillars-list{grid-template-columns:1fr;} .hdr-sssc{display:none;} }
       .card { background:#fff; border:1px solid var(--pl-border); border-radius: 12px; padding: 1rem; }
       .pillar-title, .feature-title { margin:0 0 .25rem 0; color: var(--pl-accent); font-weight: 800; font-size: 1.05rem; }
       .muted { color: var(--pl-gray); }
@@ -123,6 +125,7 @@
           <span class="brand-underscore" aria-hidden="true">_</span>
           <span class="brand-word">Logic</span>
         </a>
+        <div class="hdr-sssc" aria-label="Smart Systems. Stronger Communities.">Smart Systems. Stronger Communities.</div>
       </div>
     </header>
 
