@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PublicLogic — Smart Systems. Stronger Communities.</title>
+  <meta name="description" content="PublicLogic: VAULT — Virtual Automation & Unified Logic for Towns." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>PublicLogic</h1>
+      <p class="tagline">Smart Systems. Stronger Communities.</p>
+      <nav>
+        <a href="#vault">VAULT</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h2>VAULT: Virtual Automation & Unified Logic for Towns</h2>
+      <p>A practical framework built in real municipal trenches. Connect the tools you already use. Standardize workflows. Keep records right. No fluff.</p>
+      <a class="cta" href="#contact">Talk with us</a>
+    </section>
+
+    <section id="vault" class="container grid">
+      <div class="card">
+        <h3>Intake → Workflow → Compliance → Archive</h3>
+        <p>End-to-end logic without vendor sprawl. Forms to files to dashboards to retention—clean and auditable.</p>
+      </div>
+      <div class="card">
+        <h3>Municipal-first</h3>
+        <p>Built by practitioners. Works with Microsoft 365, email, APIs, and platforms towns already use.</p>
+      </div>
+      <div class="card">
+        <h3>Pilot-ready</h3>
+        <p>Start with Licensing, DPW/Facilities, or Payroll+Accruals. Expand on wins.</p>
+      </div>
+    </section>
+
+    <section id="work" class="container">
+      <h2>Recent Work</h2>
+      <ul class="work-list">
+        <li><strong>HubbCONNECT</strong> — AP automation, licensing workflows, budget explorer.</li>
+        <li><strong>Meeting Room</strong> — Hybrid-capable AV + modular layout on a municipal budget.</li>
+        <li><strong>Records</strong> — Practical retention + metadata for findability.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:execassistant@hubbardstonma.gov">execassistant@hubbardstonma.gov</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com">Reach out on LinkedIn</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> PublicLogic. Built with GitHub Pages.</small>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
