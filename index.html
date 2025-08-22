@@ -4,49 +4,130 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PublicLogic × VAULT — Launching 09·01</title>
-  <meta name="description" content="PublicLogic × VAULT — Virtual Automation & Unified Logic Toolkit. Launching 09/01." />
+  <meta name="description" content="PublicLogic × VAULT — a practitioner-built logic toolkit to standardize operations and ship outcomes. Launching 09/01." />
   <meta name="theme-color" content="#0b1020" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PublicLogic × VAULT — Launching 09·01" />
+  <meta property="og:description" content="Systems, not slides. Standardize work. Connect tools. Ship outcomes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nboudreauma.github.io/PublicLogic/" />
+
+  <!-- Font (optional; safe to remove) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="stage">
-    <div class="shell">
-      <header class="brand">
-        <div class="mark" aria-hidden="true">PL</div>
-        <div class="wordmark">
-          <h1>PublicLogic</h1>
-          <p>VAULT — Virtual Automation & Unified Logic Toolkit</p>
-        </div>
-      </header>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#">
+        <span class="logo" aria-hidden="true">PL</span>
+        <strong>PublicLogic</strong>
+        <span class="x">×</span>
+        <span class="vault">VAULT</span>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#vault">VAULT</a>
+        <a href="#launch" class="pill">09·01</a>
+      </nav>
+    </div>
+  </header>
 
-      <section class="hero">
-        <h2>Launching <span class="accent">09 / 01</span></h2>
-        <div class="clock" aria-label="Countdown to launch">
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Pre-launch</p>
+        <h1>Systems, not slides.</h1>
+        <p class="lead">A practitioner-built logic toolkit to standardize work, connect the tools you already use, and ship outcomes that stick.</p>
+
+        <div id="countdown" class="countdown" aria-label="Countdown to 09/01 launch">
           <div><span id="d">–</span><small>Days</small></div>
           <div><span id="h">–</span><small>Hours</small></div>
           <div><span id="m">–</span><small>Minutes</small></div>
           <div><span id="s">–</span><small>Seconds</small></div>
         </div>
-        <p class="sub">Systems, not slides. Clean logic. Real outcomes.</p>
 
         <div class="cta">
-          <a class="btn primary" href="mailto:execassistant@hubbardstonma.gov?subject=PublicLogic%20Early%20Access&body=I%E2%80%99m%20interested%20in%20early%20access%20to%20VAULT.">Request early access</a>
-          <a class="btn" href="mailto:execassistant@hubbardstonma.gov?subject=PublicLogic%20Launch%20Note&body=Please%20send%20the%20launch%20note%20on%2009/01.">Get the launch note</a>
+          <a class="btn primary" href="mailto:admin@hubbardstonma.gov?subject=PublicLogic%20Early%20Access&body=I%E2%80%99m%20interested%20in%20early%20access%20to%20PublicLogic%20and%20VAULT.">Request early access</a>
+          <a class="btn" href="mailto:admin@hubbardstonma.gov?subject=PublicLogic%20Launch%20Note&body=Please%20send%20the%20launch%20note%20on%2009/01.">Get the launch note</a>
         </div>
-      </section>
+      </div>
 
-      <footer class="foot">
-        <small>© <span id="year"></span> PublicLogic. All rights reserved.</small>
-      </footer>
-    </div>
+      <!-- ambient background -->
+      <div class="glow g1"></div>
+      <div class="glow g2"></div>
+    </section>
 
-    <!-- subtle background elements -->
-    <div class="glow g1"></div>
-    <div class="glow g2"></div>
+    <!-- ABOUT -->
+    <section id="about" class="grid wrap">
+      <article class="card">
+        <h3>Built by practitioners</h3>
+        <p>We operate where work actually happens. Tight loops, minimal jargon, and deliverables you can ship this quarter.</p>
+      </article>
+      <article class="card">
+        <h3>Framework > one-off</h3>
+        <p>Standard libraries for intake, routing, records, and reporting. Reusable patterns beat bespoke rebuilds.</p>
+      </article>
+      <article class="card">
+        <h3>Platform-agnostic</h3>
+        <p>Works with the stack you already have (Microsoft 365, email, APIs). No rip-and-replace, no vendor sprawl.</p>
+      </article>
+    </section>
+
+    <!-- VAULT PEEK -->
+    <section id="vault" class="wrap vault">
+      <div class="split">
+        <div>
+          <h2>VAULT</h2>
+          <p class="sub">Virtual Automation & Unified Logic Toolkit</p>
+          <ul class="checks">
+            <li>Intake → Workflow → Compliance → Archive</li>
+            <li>Single source of logic; clean hand-offs</li>
+            <li>Files, metadata, and audit trail by default</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <!-- simple inline SVG mark -->
+          <svg viewBox="0 0 200 200" role="img" aria-label="VAULT mark">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#3be389"/>
+                <stop offset=".6" stop-color="#2bc0ea"/>
+                <stop offset="1" stop-color="#6ea8ff"/>
+              </linearGradient>
+            </defs>
+            <rect x="18" y="18" width="164" height="164" rx="20" fill="url(#g)" opacity=".20" />
+            <rect x="42" y="60" width="116" height="92" rx="12" fill="none" stroke="url(#g)" stroke-width="8"/>
+            <circle cx="100" cy="106" r="16" fill="none" stroke="url(#g)" stroke-width="8"/>
+            <path d="M72 60a28 28 0 0 1 56 0" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAUNCH CONTENT -->
+    <section id="launch" class="wrap coming card">
+      <h2>Dropping 09/01</h2>
+      <ul>
+        <li>Launch brief (how the toolkit works)</li>
+        <li>Playbooks & patterns you can copy</li>
+        <li>Case snapshots and outcomes</li>
+        <li>Early-access pilots & simple pricing</li>
+      </ul>
+      <p class="note">Want a heads-up? Hit <em>Get the launch note</em> above.</p>
+    </section>
   </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <small>© <span id="year"></span> PublicLogic. All rights reserved.</small>
+    </div>
+  </footer>
 
   <script src="main.js"></script>
 </body>
