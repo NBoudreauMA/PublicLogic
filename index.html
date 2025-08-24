@@ -3,19 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PublicLogic — A Municipal Solution to a Universal Problem</title>
-    <meta name="description" content="PublicLogic is practitioner‑led. VAULT™: Verified Automation & Unified Logic for Towns. Smart Systems. Stronger Communities. People.Data.Systems. Patent Pending." />
+    <title>Public_Logic — Launching 9/1/2025</title>
     <style>
       :root {
-        --pl-green: #0f3d2e;       /* deep municipal green */
-        --pl-green-soft: #2d6b55;  /* soft accent */
+        --pl-green: #0f3d2e;
+        --pl-green-soft: #2d6b55;
         --pl-dark: #1e1e1e;
         --pl-light: #f7f7f7;
         --pl-gray: #4a4a4a;
         --pl-border:#e6e6e6;
       }
-      *{box-sizing:border-box}
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background: var(--pl-light); color: var(--pl-dark); line-height:1.6; margin:0; }
+      *{box-sizing:border-box; margin:0; padding:0;}
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+        background: var(--pl-light);
+        color: var(--pl-dark);
+        line-height:1.6;
+        margin:0;
+        display:flex;
+        flex-direction:column;
+        min-height:100vh;
+      }
       .container { width: min(980px, 92%); margin:0 auto; padding:1.25rem 1rem; }
 
       header { background: var(--pl-green); color:#fff; border-bottom: 2px solid #0b2c21; position:sticky; top:0; z-index:40; }
@@ -24,17 +32,42 @@
       .brand-underscore{ color:#7ee4c7; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
       .strap { font-weight:700; font-size:.9rem; opacity:.9; }
 
-      h1,h2 { margin:.25rem 0 .5rem; letter-spacing:-.01em; }
-      .section { padding:1.6rem 0; border-bottom:1px solid var(--pl-border); }
-      .lead { color:var(--pl-gray); max-width:70ch; margin:.25rem 0 .25rem; }
-      .card { background:#fff; border:1px solid var(--pl-border); border-radius:8px; padding:.75rem 1rem; margin:.35rem 0; }
-
-      .vault { background:#fff; border-left:6px solid var(--pl-green); box-shadow:0 2px 6px rgba(0,0,0,.06); }
-      .vault-head { display:flex; align-items:center; gap:.6rem; margin-bottom:.4rem; }
-      .vault-logo{ width:44px; height:auto; display:block; }
-      .modules { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:.7rem; margin-top:.4rem; }
-      .module { background:#fff; border:1px solid var(--pl-border); border-left:4px solid var(--pl-green-soft); border-radius:8px; padding:.7rem .9rem; }
-      .muted { color: var(--pl-gray); }
+      main {
+        flex:1;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        flex-direction:column;
+        padding:2rem 1rem;
+      }
+      img.logo {
+        max-width:320px;
+        height:auto;
+        margin-bottom:1.25rem;
+      }
+      h1 {
+        font-size:2rem;
+        margin:.5rem 0;
+        color:var(--pl-green);
+      }
+      p {
+        font-size:1.1rem;
+        margin:.5rem 0 1.5rem;
+        color:#333;
+      }
+      a.btn {
+        background:var(--pl-green);
+        color:#fff;
+        text-decoration:none;
+        padding:.75rem 1.25rem;
+        border-radius:6px;
+        font-weight:600;
+        transition:background .2s ease;
+      }
+      a.btn:hover {
+        background:#0c2e22;
+      }
 
       footer { background:#0f0f0f; color:#cfcfcf; padding:1rem; text-align:center; border-top:1px solid #1f1f1f; }
       footer p { margin:.2rem 0; }
@@ -44,89 +77,26 @@
   <body>
     <header role="banner">
       <div class="container wrap">
-        <a class="brand" href="#home" aria-label="Public Logic home">Public<span class="brand-underscore">_</span>Logic</a>
+        <a class="brand" href="index.html" aria-label="Public Logic home">Public<span class="brand-underscore">_</span>Logic</a>
         <div class="strap">Smart Systems. Stronger Communities.</div>
       </div>
     </header>
 
-    <main id="home" role="main">
-      <!-- INTRO / PROMISE -->
-      <section class="section">
-        <div class="container">
-          <h1>A Municipal Solution to a Universal Problem</h1>
-          <p class="lead">PublicLogic is practitioner‑led. Built from the grind of town administration, not a whiteboard. We standardize the logic beneath everyday municipal work so staff can move faster with clarity. <strong>People. Data. Systems.</strong></p>
-          <p class="lead">The model was proven in Hubbardston through <strong>HubbCONNECT</strong>. From that work came <strong>VAULT™</strong> — our framework for Verified Automation & Unified Logic for Towns. Quiet, durable, and repeatable.</p>
-        </div>
-      </section>
-
-      <!-- VAULT -->
-      <section class="section">
-        <div class="container card vault" id="vault">
-          <div class="vault-head">
-            <img class="vault-logo" src="vault-lock-folder.png" alt="VAULT lock‑folder logo"/>
-            <h2 style="margin:0;">VAULT™</h2>
-          </div>
-          <p class="muted"><strong>Verified Automation & Unified Logic for Towns.</strong> A compliance backbone and workflow layer that uses what towns already own. It doesn’t replace people — it frees them to do the work residents feel.</p>
-          <p class="muted" style="margin-top:.3rem;">Extended where it matters: <em>meeting rooms</em> (hybrid governance basics), <em>budget templates</em> (plain‑language, board‑ready), and <em>form development</em> (predictable intake that routes and retains).</p>
-        </div>
-      </section>
-
-      <!-- ONE PAGER SNAPSHOT -->
-      <section class="section">
-        <div class="container">
-          <h2>One‑Page Snapshot</h2>
-          <div class="card"><strong>Problem:</strong> Disconnected tools, folders‑in‑folders, unclear retention, and staff wearing five hats. Residents wait; boards guess.</div>
-          <div class="card"><strong>Approach:</strong> Standard patterns for intake → workflow → compliance → archive. Built on existing platforms (email, M365, forms, APIs). No rip‑and‑replace.</div>
-          <div class="card"><strong>Proof:</strong> Hubbardston pilots across finance, clerk/licensing, DPW/facilities, and administration. Weeks, not years.</div>
-        </div>
-      </section>
-
-      <!-- MODULES (ACRONYMS SPELLED OUT, JUST ENOUGH) -->
-      <section class="section" id="modules">
-        <div class="container">
-          <h2>Modules</h2>
-          <p class="lead">Ten modules — spelled out just enough to see the shape, not the recipe.</p>
-          <div class="modules">
-            <div class="module"><strong>FISCAL</strong><br><span class="muted">Financial Integrity & Strategic Civic Analytics Layer</span></div>
-            <div class="module"><strong>FIX</strong><br><span class="muted">Field Infrastructure eXchange (requests & work orders)</span></div>
-            <div class="module"><strong>CLERK</strong><br><span class="muted">Civic Licensing, Elections, Records & Knowledge</span></div>
-            <div class="module"><strong>PERMIT</strong><br><span class="muted">Process Enablement, Routing & Municipal Intake Tools</span></div>
-            <div class="module"><strong>PLAN</strong><br><span class="muted">Planning Logic & Application Network</span></div>
-            <div class="module"><strong>INSPECT</strong><br><span class="muted">Inspection & Safety Protocol Compliance Tracking</span></div>
-            <div class="module"><strong>ASSESS</strong><br><span class="muted">Assessing Systems & Equity Standards</span></div>
-            <div class="module"><strong>FIRE</strong><br><span class="muted">Fire Incident & Response Engine</span></div>
-            <div class="module"><strong>PD</strong><br><span class="muted">Police Dispatch & Documentation</span></div>
-            <div class="module"><strong>PLAY</strong><br><span class="muted">Parks, Leisure & Activities for Youth</span></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICES (JUST ENOUGH) -->
-      <section class="section">
-        <div class="container">
-          <h2>Additional Services</h2>
-          <div class="card">Meeting room design & hybrid readiness — clear audio, simple controls, predictable recording/records.</div>
-          <div class="card">Budget templates & transparency — board‑ready, plain‑language fiscal views.</div>
-          <div class="card">Form development — low‑code standards for intake, routing, and retention.</div>
-        </div>
-      </section>
-
-      <!-- COMMUNITY / FUND -->
-      <section class="section">
-        <div class="container">
-          <h2>Community & Legacy</h2>
-          <p class="lead">This is a community project. We build with towns, not for them. Practitioners, partners, and residents have a seat at the table.</p>
-          <div class="card"><strong>The Fidele and Diane Boudreau Public Innovation Legacy Fund</strong> — 10% of net revenue is reinvested in digital equity, public access, and municipal framework pilots. Innovation that sticks.</div>
-        </div>
-      </section>
+    <main>
+      <img src="logoA.png" alt="Public_Logic Logo" class="logo" />
+      <h1>Launching September 1, 2025</h1>
+      <p>Smart Systems. Stronger Communities.<br/>People.Data.Systems.</p>
+      <a href="field_notes_final.html" class="btn">Read Field Note_001</a>
     </main>
 
     <footer role="contentinfo">
       <p>People.Data.Systems.</p>
-      <p>© <span id="year"></span> PublicLogic. All rights reserved.</p>
-      <p class="tiny">VAULT™ framework and related marks — patent pending.</p>
+      <p>© <span id="year"></span> Public_Logic. All rights reserved.</p>
+      <p class="tiny">VAULT<span style="font-variant-caps: all-small-caps;">™</span> framework and related marks — patent pending.</p>
     </footer>
 
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
