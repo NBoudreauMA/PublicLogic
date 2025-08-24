@@ -7,11 +7,8 @@
     <style>
       :root {
         --pl-green: #0f3d2e;
-        --pl-green-soft: #2d6b55;
         --pl-dark: #1e1e1e;
         --pl-light: #f7f7f7;
-        --pl-gray: #4a4a4a;
-        --pl-border:#e6e6e6;
       }
       *{box-sizing:border-box; margin:0; padding:0;}
       body {
@@ -41,11 +38,34 @@
         flex-direction:column;
         padding:2rem 1rem;
       }
-      img.logo {
-        max-width:320px;
-        height:auto;
+
+      .folder {
+        display:inline-block;
+        background:#fff;
+        border:2px solid var(--pl-green);
+        border-radius:6px;
+        padding:1.5rem 2rem;
+        box-shadow:0 4px 12px rgba(0,0,0,.08);
+        position:relative;
         margin-bottom:1.25rem;
       }
+      .folder::before {
+        content:'';
+        position:absolute;
+        top:-12px;
+        left:20px;
+        width:80px;
+        height:12px;
+        background:#fff;
+        border:2px solid var(--pl-green);
+        border-bottom:none;
+        border-radius:4px 4px 0 0;
+      }
+      img.logo {
+        max-width:280px;
+        height:auto;
+      }
+
       h1 {
         font-size:2rem;
         margin:.5rem 0;
@@ -56,6 +76,13 @@
         margin:.5rem 0 1.5rem;
         color:#333;
       }
+      .pds {
+        font-weight:700;
+        letter-spacing:.05em;
+        margin-top:.25rem;
+        color:#0f3d2e;
+      }
+
       a.btn {
         background:var(--pl-green);
         color:#fff;
@@ -83,9 +110,11 @@
     </header>
 
     <main>
-      <img src="logoA.png" alt="Public_Logic Logo" class="logo" />
+      <div class="folder">
+        <img src="logoA.png" alt="Public_Logic Logo" class="logo" />
+      </div>
       <h1>Launching September 1, 2025</h1>
-      <p>Smart Systems. Stronger Communities.<br/>People.Data.Systems.</p>
+      <p class="pds">People_Data_Systems</p>
       <a href="field_notes_final.html" class="btn">Read Field Note_001</a>
     </main>
 
