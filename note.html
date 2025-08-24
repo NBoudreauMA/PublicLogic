@@ -1,94 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A Personal Note from Nate — Public_Logic</title>
-  <meta name="description" content="A personal founder’s letter from Nathan Boudreau on why Public_Logic exists and how it serves local government." />
-  <style>
-    :root{
-      --ink:#0b2239;
-      --blue:#1463a5;
-      --paper:#ffffff;
-      --page:#f6f8fb;
-      --rule:#e6ebf1;
-      --shadow:0 12px 28px rgba(8,22,35,.06);
-      --radius:14px;
-      --maxw:760px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--page);color:var(--ink);font:17px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif}
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Letter from the Town Administrator — PublicLogic</title>
+    <meta name="description" content="A personal letter from Nathan Boudreau on why PublicLogic exists and how it supports municipal work." />
+    <style>
+      :root {
+        --pl-green: #0f3d2e;       /* deep municipal green (matches site) */
+        --pl-green-soft: #2d6b55;  /* accent */
+        --pl-dark: #1e1e1e;
+        --pl-light: #f7f7f7;
+        --pl-gray: #4a4a4a;
+        --pl-border:#e6e6e6;
+      }
+      *{box-sizing:border-box}
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background: var(--pl-light); color: var(--pl-dark); line-height:1.65; margin:0; }
+      .container { width: min(980px, 92%); margin:0 auto; padding:1.25rem 1rem; }
 
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:18px}
-    .letter{
-      background:var(--paper);
-      border:1px solid var(--rule);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
+      /* site header */
+      header { background: var(--pl-green); color:#fff; border-bottom: 2px solid #0b2c21; position:sticky; top:0; z-index:40; }
+      header .wrap { display:flex; justify-content:space-between; align-items:center; gap:.5rem; padding:.75rem 0; }
+      .brand { font-weight:900; font-size:1.25rem; text-decoration:none; color:#fff; letter-spacing:-.01em; }
+      .brand-underscore{ color:#7ee4c7; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      nav a { color:#dff5ec; text-decoration:none; font-weight:700; margin-left:.9rem; }
+      nav a:hover { text-decoration:underline; }
 
-    header{text-align:center;padding:24px 18px 8px 18px}
-    .hero{max-width:280px;width:100%;height:auto;display:inline-block}
+      /* letter card */
+      .section { padding:1.6rem 0; }
+      .card { background:#fff; border:1px solid var(--pl-border); border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.05); }
+      .letterhead { display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--pl-border); padding:1rem 1rem; }
+      .letterhead img { height:56px; width:auto; }
+      .dept { text-align:right; color:#2d3d36; font-size:.95rem; line-height:1.3; }
+      .dept strong { display:block; color:#13241d; }
 
-    .body{padding:28px}
-    h1{margin:0 0 10px 0;font-size:1.9rem;letter-spacing:.2px}
-    .kicker{margin:0 0 22px 0;color:#3f5163;font-weight:600}
-    p{margin:0 0 14px 0}
-    em{font-style:italic}
-    .pull{
-      margin:16px 0 18px 0;padding:12px 14px;
-      border-left:4px solid var(--blue);
-      background:#eef5ff;color:#0e3d74;
-      border-radius:10px;font-weight:600
-    }
-    .sig{margin-top:18px;font-weight:650}
-    .sig small{display:block;color:#5c6b7c;margin-top:4px}
+      .body { padding:1.1rem 1.1rem 0.9rem; }
+      .meta { display:flex; justify-content:space-between; gap:1rem; color:#5a6b63; font-size:.95rem; margin:.25rem 0 0.75rem; }
+      h1 { margin:.2rem 0 .3rem; font-size:1.6rem; letter-spacing:-.01em; }
+      .salutation { margin:.3rem 0 1rem; }
+      p { margin:.2rem 0 0.9rem; color:#222; }
+      em { font-style:italic; }
+      .pull { background:#eef7f2; border-left:6px solid var(--pl-green-soft); padding:.8rem 1rem; border-radius:10px; color:#183a2e; font-weight:700; }
 
-    footer{padding:18px 28px;border-top:1px dashed var(--rule);text-align:center}
-    .foot{color:#5a6b7d;font-size:.95rem}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <article class="letter" aria-label="Personal founder’s letter">
-      <header>
-        <!-- Logo A smaller, centered -->
-        <img
-          class="hero"
-          src="https://raw.githubusercontent.com/NBoudreauMA/PublicLogic/main/logoA.png"
-          alt="Public_Logic Logo A"
-        />
-      </header>
+      .closing { margin-top:.6rem; }
+      .sig { font-weight:700; }
+      .sig small { display:block; color:#53645c; margin-top:.25rem; }
 
-      <div class="body">
-        <h1>A personal note from Nate</h1>
-        <p class="kicker">Why I started this work — and who it’s for.</p>
-
-        <p>My name is Nathan Boudreau. I built <strong>Public_Logic — Verified Automation &amp; Unified Logic for Towns</strong> the only way I know how: from inside town government, where the meetings run long, the emails don’t stop, and people still expect the lights to come on and the roads to get plowed.</p>
-
-        <p>There were hard seasons. An ethics uncertainty knocked me off course. A cancer scare slowed me down. I know what burnout feels like before you even put the key in the office door. I also know what it means to show up anyway — to pull a packet together at midnight, fix a turnover by hand, or help a resident who needs an answer today.</p>
-
-        <div class="pull">Public service is people doing difficult work for their neighbors. The tools should help — not add weight.</div>
-
-        <p>I kept seeing the same thing: too many systems, too many hands, and no shared way to move the work. So I started shaping a simple idea — put the work on rails. One path that carries requests, files, and decisions from <em>Town Hall</em>, through <em>compliance</em>, to a clear <em>public result</em>.</p>
-
-        <p><strong>Public_Logic</strong> treats this as <em>digital infrastructure</em>, not another app to learn. The underscore in our name is a reminder: one line that connects everything.</p>
-
-        <p><strong>VAULT</strong> is built on an agnostic data framework — a flexible system that layers rules, structure, and compliance to serve municipal government.</p>
-
-        <p>This isn’t about shiny software. It’s about fewer surprises, strong records, and services people can actually use. If we can’t explain it, log it, and share it, it doesn’t ship.</p>
-
-        <p class="sig">
-          — Nathan R. Boudreau, MPA, MCPPO
-          <small>Town Administrator &amp; Founder, Public_Logic</small>
-        </p>
+      footer { background:#0f0f0f; color:#cfcfcf; padding:1rem; text-align:center; border-top:1px solid #1f1f1f; }
+      footer p { margin:.2rem 0; }
+      .tiny { font-size:.85rem; opacity:.85; }
+    </style>
+  </head>
+  <body>
+    <!-- Site Header (matches home) -->
+    <header role="banner">
+      <div class="container wrap">
+        <a class="brand" href="index.html" aria-label="PublicLogic home">Public<span class="brand-underscore">_</span>Logic</a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="#letter">Letter</a>
+        </nav>
       </div>
+    </header>
 
-      <footer>
-        <div class="foot">© Public_Logic — Digital Infrastructure &amp; Municipal Services</div>
-      </footer>
-    </article>
-  </div>
-</body>
+    <main role="main">
+      <section class="section" id="letter">
+        <div class="container">
+          <article class="card" aria-label="Letter from the Town Administrator">
+            <!-- Letterhead -->
+            <div class="letterhead">
+              <img src="logoA.png" alt="Public_Logic letterhead" />
+              <div class="dept">
+                <strong>Office of the Town Administrator</strong>
+                PublicLogic — Digital Infrastructure &amp; Municipal Services
+              </div>
+            </div>
+
+            <!-- Letter body -->
+            <div class="body">
+              <div class="meta">
+                <div>To: Residents, staff, and anyone doing the work</div>
+                <div><time datetime="">Today</time></div>
+              </div>
+
+              <h1>A letter from the Town Administrator (and founder)</h1>
+              <p class="salutation">Hi everyone,</p>
+
+              <p>My name is Nathan Boudreau. I built <strong>Public_Logic — Verified Automation &amp; Unified Logic for Towns</strong> the only way I know how: from inside municipal buildings, where meetings run long, inboxes stay full, and people still expect the lights to come on and the roads to get plowed.</p>
+
+              <p>There were hard seasons. An ethics uncertainty knocked me off course. A cancer scare slowed me down. I know what burnout feels like before you even put the key in the office door. I also know what it means to show up anyway — to pull a packet together at midnight, fix a turnover by hand, or help a resident who needs an answer today.</p>
+
+              <div class="pull">Public service is people doing difficult work for their neighbors. The tools should help — not add weight.</div>
+
+              <p>I kept seeing the same thing: too many systems, too many hands, and no shared way to move the work. So I started shaping a simple idea — put the work on rails. One path that carries requests, files, and decisions from <em>Town Hall</em>, through <em>compliance</em>, to a clear <em>public result</em>.</p>
+
+              <p><strong>Public_Logic</strong> treats this as <em>digital infrastructure</em>, not another app to learn. The underscore in our name is a reminder: one line that connects everything.</p>
+
+              <p><strong>VAULT</strong> is built on an agnostic data framework — a flexible system that layers rules, structure, and compliance to serve municipal government.</p>
+
+              <p>This isn’t about shiny software. It’s about fewer surprises, strong records, and services people can actually use. If we can’t explain it, log it, and share it, it doesn’t ship.</p>
+
+              <p class="closing">Thanks for reading, and thanks for the work you do every day.</p>
+
+              <p class="sig">
+                — Nathan R. Boudreau, MPA, MCPPO
+                <small>Town Administrator &amp; Founder, PublicLogic</small>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>People.Data.Systems.</p>
+      <p>© <span id="year"></span> PublicLogic. All rights reserved.</p>
+      <p class="tiny">VAULT™ framework and related marks — patent pending.</p>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
 </html>
